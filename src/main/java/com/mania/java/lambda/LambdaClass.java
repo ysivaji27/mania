@@ -9,14 +9,9 @@ public class LambdaClass {
         lambdaClass.lambdaExpressions();
         lambdaClass.stringFun();
 
-        LambdaClass foo = parameter -> buildString(parameter);
+
     }
 
-    private static Object buildString(Object parameter) {
-        String result = "Something " + parameter;
-        //many lines of code
-        return result;
-    }
 
     private void lambdaExpressions() {
         ArrayList<Integer> numbers = new ArrayList<Integer>();
@@ -24,7 +19,7 @@ public class LambdaClass {
         numbers.add(9);
         numbers.add(8);
         numbers.add(1);
-        numbers.forEach((n) -> { System.out.println(n); });
+        numbers.forEach((number) -> { System.out.println(number); });
 
         Consumer<Integer> method = (n) -> { System.out.println(n); };
         numbers.forEach(method);
@@ -35,6 +30,10 @@ public class LambdaClass {
         StringFunction ask = (s) -> s + "?";
         printFormatted("Hello", exclaim);
         printFormatted("Hello", ask);
+
+        StringConcat s = (str1, str2) -> str1 + str2;
+        System.out.println("Result: "+s.sconcat("Hello ", "World"));
+
     }
 
     public static void printFormatted(String str, StringFunction format) {
