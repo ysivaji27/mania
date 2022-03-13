@@ -24,6 +24,8 @@ class Student implements Comparable<Student>{
             if (student.name.equals(this.name)) {
                 return student.id - this.id;
             } else {
+                System.out.println("A".compareTo("B"));
+                System.out.println("B".compareTo("A"));
                 return this.name.compareTo(student.name);
             }
         } else {
