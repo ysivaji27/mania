@@ -39,9 +39,6 @@
             <version>3.0.2</version>
         </dependency>
 
-
-        <!-- commit message -->
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
